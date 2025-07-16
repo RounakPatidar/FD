@@ -4,8 +4,6 @@ import './FdAdvice.css';
 const FdAdvice = () => {
   return (
     <div 
-
-    style={{maxWidth:'1200px'}}
     className="FDADVICE-container">
       {/* Header */}
       {/* <header className="FDADVICE-header">
