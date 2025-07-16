@@ -5,6 +5,19 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   overflow-x: auto;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
 }
 
 /* Header Styles */
@@ -19,7 +32,7 @@
 }
 
 .FDADVICE-header-content {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -100,27 +113,29 @@
 
 .FDADVICE-nav-highlight {
   background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-  color: white !important;
+  color: white;
   box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
 }
 
 .FDADVICE-nav-highlight:hover {
-  background: linear-gradient(135deg, #1d4ed8, #1e40af) !important;
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
   transform: translateY(-1px);
 }
 
 /* Main Content */
 .FDADVICE-main {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   padding: 30px 20px;
+  min-height: calc(100vh - 100px);
 }
 
 .FDADVICE-content-wrapper {
   display: flex;
   gap: 30px;
   margin-bottom: 40px;
+  min-height: 400px;
 }
 
 /* Left Section - Warning */
@@ -131,12 +146,12 @@
 
 .FDADVICE-warning-card {
   background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
-  padding: 25px;
+  padding: 30px;
   border-radius: 16px;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
   position: relative;
   border-left: 4px solid #ef4444;
-  max-width: 500px;
+  height: 100%;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -146,9 +161,9 @@
 }
 
 .FDADVICE-warning-title {
-  font-size: 16px;
+  font-size: 18px;
   color: #1e293b;
-  margin: 0 0 18px 0;
+  margin: 0 0 20px 0;
   line-height: 1.5;
   font-weight: 600;
 }
@@ -156,7 +171,7 @@
 .FDADVICE-never {
   color: #ef4444;
   font-weight: 800;
-  font-size: 17px;
+  font-size: 19px;
 }
 
 .FDADVICE-highlight {
@@ -166,17 +181,17 @@
 }
 
 .FDADVICE-warning-text {
-  font-size: 14px;
+  font-size: 15px;
   color: #64748b;
-  margin: 12px 0;
+  margin: 15px 0;
   line-height: 1.6;
   font-weight: 500;
 }
 
 .FDADVICE-warning-icon {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 25px;
+  top: 25px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -194,12 +209,6 @@
   font-weight: 800;
   font-size: 20px;
   box-shadow: 0 3px 12px rgba(239, 68, 68, 0.4);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
 }
 
 .FDADVICE-security-mascot {
@@ -249,13 +258,16 @@
 .FDADVICE-hero-card {
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   color: white;
-  padding: 35px;
+  padding: 40px;
   border-radius: 16px;
   position: relative;
   overflow: hidden;
-  max-width: 500px;
+  height: 100%;
   box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);
   transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .FDADVICE-hero-card:hover {
@@ -282,25 +294,25 @@
 }
 
 .FDADVICE-hero-title {
-  font-size: 20px;
+  font-size: 22px;
   margin: 0;
   font-weight: 500;
   opacity: 0.9;
 }
 
 .FDADVICE-hero-subtitle {
-  font-size: 28px;
-  margin: 8px 0;
+  font-size: 32px;
+  margin: 10px 0;
   font-weight: 800;
   letter-spacing: -0.025em;
 }
 
 .FDADVICE-hero-service {
-  font-size: 16px;
-  margin: 8px 0;
+  font-size: 18px;
+  margin: 10px 0;
   background-color: rgba(255, 255, 255, 0.15);
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 10px 20px;
+  border-radius: 25px;
   display: inline-block;
   font-weight: 600;
   backdrop-filter: blur(10px);
@@ -308,14 +320,14 @@
 
 .FDADVICE-hero-icons {
   display: flex;
-  gap: 18px;
+  gap: 20px;
   align-items: center;
 }
 
 .FDADVICE-banking-icon,
 .FDADVICE-fd-icon {
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   display: flex;
@@ -331,8 +343,8 @@
 }
 
 .FDADVICE-bank-building {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   background-color: white;
   border-radius: 4px;
   position: relative;
@@ -353,8 +365,8 @@
 }
 
 .FDADVICE-money-stack {
-  width: 24px;
-  height: 28px;
+  width: 26px;
+  height: 30px;
   background: repeating-linear-gradient(
     0deg,
     white 0px,
@@ -367,11 +379,11 @@
 }
 
 .FDADVICE-hero-rating {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .FDADVICE-stars {
-  font-size: 16px;
+  font-size: 18px;
   color: #fbbf24;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
@@ -379,18 +391,21 @@
 /* Services Section */
 .FDADVICE-services-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  margin: 40px 0;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin: 50px 0;
 }
 
 .FDADVICE-service-card {
   background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
-  padding: 25px;
+  padding: 30px;
   border-radius: 16px;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   border: 1px solid #f1f5f9;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .FDADVICE-service-card:hover {
@@ -399,9 +414,9 @@
 }
 
 .FDADVICE-service-title {
-  font-size: 16px;
+  font-size: 18px;
   color: #1e293b;
-  margin: 0 0 20px 0;
+  margin: 0 0 25px 0;
   text-align: center;
   font-weight: 600;
 }
@@ -413,13 +428,13 @@
 
 .FDADVICE-login-btn {
   width: 100%;
-  padding: 12px 20px;
+  padding: 15px 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   transition: all 0.2s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -450,17 +465,18 @@
 }
 
 .FDADVICE-service-desc {
-  font-size: 14px;
+  font-size: 15px;
   color: #64748b;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-weight: 500;
+  flex-grow: 1;
 }
 
 .FDADVICE-features-title {
-  font-size: 15px;
+  font-size: 16px;
   color: #1e293b;
-  margin: 0 0 15px 0;
+  margin: 0 0 18px 0;
   font-weight: 700;
 }
 
@@ -471,10 +487,10 @@
 }
 
 .FDADVICE-features-list li {
-  font-size: 13px;
+  font-size: 14px;
   color: #64748b;
-  margin-bottom: 8px;
-  padding-left: 20px;
+  margin-bottom: 10px;
+  padding-left: 25px;
   position: relative;
   font-weight: 500;
   line-height: 1.5;
@@ -485,19 +501,20 @@
   position: absolute;
   left: 0;
   color: #3b82f6;
-  font-size: 10px;
+  font-size: 12px;
   top: 2px;
 }
 
 /* CTA Section */
 .FDADVICE-cta-section {
-  margin-top: 50px;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 .FDADVICE-cta-card {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: white;
-  padding: 40px;
+  padding: 50px;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 12px 40px rgba(16, 185, 129, 0.3);
@@ -522,18 +539,18 @@
 }
 
 .FDADVICE-cta-title {
-  font-size: 28px;
-  margin: 0 0 20px 0;
+  font-size: 32px;
+  margin: 0 0 25px 0;
   font-weight: 800;
   position: relative;
   z-index: 2;
 }
 
 .FDADVICE-cta-desc {
-  font-size: 18px;
-  margin: 0 0 30px 0;
+  font-size: 20px;
+  margin: 0 0 35px 0;
   line-height: 1.6;
-  max-width: 700px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   opacity: 0.95;
@@ -546,9 +563,9 @@
   background-color: white;
   color: #059669;
   border: none;
-  padding: 15px 40px;
+  padding: 18px 45px;
   border-radius: 30px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 800;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -575,8 +592,8 @@
   }
   
   .FDADVICE-services-section {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
   }
 }
 
@@ -604,12 +621,14 @@
 
   .FDADVICE-content-wrapper {
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
+    min-height: auto;
   }
 
   .FDADVICE-warning-card,
   .FDADVICE-hero-card {
-    max-width: 100%;
+    height: auto;
+    min-height: 300px;
   }
 
   .FDADVICE-hero-content {
@@ -619,11 +638,11 @@
   }
 
   .FDADVICE-hero-title {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .FDADVICE-hero-subtitle {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .FDADVICE-services-section {
@@ -632,25 +651,27 @@
   }
 
   .FDADVICE-cta-card {
-    padding: 30px 20px;
+    padding: 40px 25px;
   }
 
   .FDADVICE-cta-title {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .FDADVICE-cta-desc {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 @media (max-width: 480px) {
   .FDADVICE-container {
     overflow-x: auto;
+    overflow-y: auto;
   }
 
   .FDADVICE-main {
     padding: 15px 10px;
+    min-height: calc(100vh - 80px);
   }
 
   .FDADVICE-warning-card,
@@ -661,8 +682,7 @@
 
   .FDADVICE-hero-card {
     padding: 25px;
-    height: auto;
-    min-height: 200px;
+    min-height: 250px;
   }
 
   .FDADVICE-warning-icon {
@@ -682,8 +702,8 @@
   }
 
   .FDADVICE-cta-btn {
-    padding: 12px 25px;
-    font-size: 16px;
+    padding: 15px 30px;
+    font-size: 18px;
   }
 
   .FDADVICE-logo-icon {
@@ -701,35 +721,43 @@
   }
 
   .FDADVICE-hero-title {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .FDADVICE-hero-subtitle {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .FDADVICE-hero-service {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .FDADVICE-warning-title {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .FDADVICE-warning-text {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .FDADVICE-service-title {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .FDADVICE-service-desc {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .FDADVICE-features-list li {
-    font-size: 12px;
+    font-size: 13px;
+  }
+
+  .FDADVICE-cta-title {
+    font-size: 24px;
+  }
+
+  .FDADVICE-cta-desc {
+    font-size: 16px;
   }
 }
 
@@ -749,7 +777,7 @@
   }
 
   .FDADVICE-cta-card {
-    padding: 25px 15px;
+    padding: 30px 15px;
   }
 
   .FDADVICE-cta-title {
@@ -761,8 +789,13 @@
   }
 
   .FDADVICE-cta-btn {
-    padding: 10px 20px;
-    font-size: 14px;
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+
+  .FDADVICE-services-section {
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 }
 
@@ -783,4 +816,21 @@ html {
 .FDADVICE-login-btn:active,
 .FDADVICE-cta-btn:active {
   transform: scale(0.98);
+}
+
+/* Ensure full page coverage */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
 }

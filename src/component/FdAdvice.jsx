@@ -49,7 +49,7 @@ const FdAdvice = () => {
                 Do not use Internet Banking if your computer is not free of malware (Viruses, Trojans, etc.)
               </p>
               <div className="FDADVICE-warning-icon">
-                <div className="FDADVICE-exclamation">!</div>
+                <div className="FDADVICE-exclamation"></div>
                 <div className="FDADVICE-security-mascot">
                   <div className="FDADVICE-mascot-body"></div>
                   <div className="FDADVICE-mascot-eyes"></div>
@@ -78,7 +78,7 @@ const FdAdvice = () => {
                 </div>
               </div>
               <div className="FDADVICE-hero-rating">
-                <div className="FDADVICE-stars">★★★★★</div>
+                <div className="FDADVICE-stars">5 Star Rating</div>
               </div>
             </div>
           </div>
